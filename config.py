@@ -45,3 +45,14 @@ if gpu_id != '':
     device = torch.device(f"cuda:{gpu_id}")
 else:
     device = torch.device('cpu')
+
+
+# lora config
+r = 2
+lora_data_dir = './data'
+lora_train_data_path = './data/json_ted/train.json'
+lora_dev_data_path = './data/json_ted/dev.json'
+lora_test_data_path = './data/json/test.json'
+lora_model_path = './experiment/model_lora_ted.pth'
+lora_log_path = './experiment/train_lora_ted.log'
+lora_output_path = './experiment/output_lora_ted.txt'

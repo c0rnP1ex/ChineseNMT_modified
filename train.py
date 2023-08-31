@@ -162,7 +162,7 @@ def evaluate(data, model, mode='dev', use_beam=True):
             trg.extend(cn_sent)
             res.extend(translation)
     if mode == 'test':
-        with open(config.output_path, "w") as fp:
+        with open(config.output_path, "w", encoding="utf-8") as fp:
             for i in range(len(trg)):
                 line = "idx:" + str(i) + trg[i] + '|||' + res[i] + '\n'
                 fp.write(line)
